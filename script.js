@@ -1,9 +1,12 @@
 $(document).ready(function () {
-    console.log( "ready!" );
     $('#search-button').on('click', () => {
+        //creates json for adding limit
         let gifsDisplayed = $('#search-limit').val();
+        //creates json for search request
         let searchTerm = $('#search-field').val();
+    //combines variable into api url to fetch information
         let url = "https://api.giphy.com/v1/gifs/search?api_key=FoVxkgXu1a1oBtFmJhHjo3YC7PtgtcPb&q=" + searchTerm + '&limit=' + gifsDisplayed;
+        
         $.get(url, function(giphyResponse) {
          
         let resultsHtml = '';
@@ -17,6 +20,8 @@ $(document).ready(function () {
         });
     });
 
+    
+    //shows back to top button on scroll
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('#back-to-top').fadeIn();
