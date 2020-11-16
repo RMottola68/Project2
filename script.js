@@ -7,8 +7,8 @@ $(document).ready(function () {
          
         let resultsHtml = '';
         for(let image of giphyResponse.data){
-            let imgHtml = `<img src=${image.images.original.url} />`
-            resultsHtml = resultsHtml + `<img src=${image.images.original.url} />`
+            let imgHtml = `<img class="img-fluid mx-auto col-12 col-lg-4 p-3" src=${image.images.original.url}/>`
+            resultsHtml = resultsHtml + imgHtml;
         }
 
         $('#search-results').html(resultsHtml);
