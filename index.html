@@ -19,7 +19,7 @@
     <script src="script.js"></script>
     <nav id="top" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand col-sm justify-content-center align-items-center">Giphy Search API</a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" id="navBurger" aria-controls="my-nav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,10 +57,10 @@
             <div class="form-inline col-12 col-lg-6 justify-content-center">
                 <label class="text-dark col-lg-7 form-control" for="search-limit">Number of gifs:</label>
                 <select id="search-limit" class="form-control col-lg-4" name="search-limit">
-                    <option value="limit-10">10</option>
-                    <option value="limit-25">25</option>
-                    <option value="limit-50">50</option>
-                    <option value="limit-100">100</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
                 </select>
             </div>
         </div>
@@ -70,7 +70,7 @@
     <div class="container">
         <div id="search-results"></div>
     </div>
-    <input type="button" class="btn btn-light" hidden />
+    <a id="back-to-top" class="btn btn-light btn-lg back-to-top" role="button"><i class="fa fa-chevron-up"></i></a>
 </body>
 
 </html>

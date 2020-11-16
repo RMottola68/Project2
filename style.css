@@ -1,4 +1,11 @@
 body{
     background-color: grey;
-    padding-top: 50px;
+    padding-top: 90px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
 }

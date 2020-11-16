@@ -1,8 +1,9 @@
 $(document).ready(function () {
     console.log( "ready!" );
     $('#search-button').on('click', () => {
+        let gifsDisplayed = $('#search-limit').val();
         let searchTerm = $('#search-field').val();
-        let url = "https://api.giphy.com/v1/gifs/search?api_key=FoVxkgXu1a1oBtFmJhHjo3YC7PtgtcPb&q=" + searchTerm;
+        let url = "https://api.giphy.com/v1/gifs/search?api_key=FoVxkgXu1a1oBtFmJhHjo3YC7PtgtcPb&q=" + searchTerm + '&limit=' + gifsDisplayed;
         $.get(url, function(giphyResponse) {
          
         let resultsHtml = '';
@@ -16,7 +17,19 @@ $(document).ready(function () {
         });
     });
 
-    $('#navBurger').on('ckick', () => {
-
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
     });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
+
 });
