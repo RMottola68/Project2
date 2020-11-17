@@ -1,6 +1,7 @@
 body{
     background-color: aquamarine;
     padding-top: 100px;
+    padding-bottom: 80px;
 }
 
 @media screen and (max-width:991px) {
