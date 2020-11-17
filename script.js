@@ -23,6 +23,14 @@ $(document).ready(function () {
         });
     });
 
+    //enter key functionality
+    $('#my-form').on('submit', (event) => {
+        event.preventDefault();
+        
+        if(keycode == '13'){
+            $('search-button').click();  
+        }
+    });
     
     //shows back to top button on scroll
     $(window).scroll(function () {
